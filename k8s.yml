@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: octetoSample
+  name: octetosample
   labels:
-    app: octetoSample
+    app: octetosample
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app : octetoSample
+      app : octetosample
   template:
     metadata:
       labels:
-        app: octetoSample
+        app: octetosample
     spec:
       containers:
-      - name: octetoSample
+      - name: octetosample
         image: dhronan/octetosample
         imagePullPolicy: Always
         ports:
@@ -26,10 +26,10 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name:  octetoSample-svc
+  name:  octetosample-svc
 spec:
   selector:
-    app:  octetoSample
+    app:  octetosample
   ports:
   - port:  80
     targetPort:  8080
