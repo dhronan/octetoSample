@@ -33,3 +33,22 @@ spec:
   ports:
   - port:  80
     targetPort:  8080
+    
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: octetosample-lb
+  annotations:
+    dev.okteto.com/generate-host: "true"
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: octetosample-svc
+                port: 
+                    number: 8080
