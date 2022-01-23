@@ -11,7 +11,7 @@ public class Controller {
 	public String method() {
 		// TODO Auto-generated method stub
 		
-		return "Reached.";
+		return "😍";
 
 	}
 }
