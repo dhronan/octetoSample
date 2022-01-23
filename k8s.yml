@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: octetoSample
-        image: dhronan/octetoSample:0.0.1
+        image: dhronan/octetosample
         imagePullPolicy: Always
         ports:
           - containerPort: 8080
